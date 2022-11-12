@@ -63,10 +63,10 @@ const Navbar = () => {
                     <FaTimes onClick={handleClick} size={25} className='absolute left-4 top-5 cursor-pointer' />
                     <nav className='mt-16 ml-1'>
                         <ul className='flex flex-col p-4 text-gray-800'>
-                            <li className='my-3 font-bold text-white'><Link activeclass="active" to="home" spy='true' smooth='true' offset={50} duration={500} >
+                            <li className='my-3 font-bold text-white'><Link activeclass="active" to="/" spy='true' smooth='true' offset={50} duration={500} >
                                 Home
                             </Link></li>
-                            <li className='my-3 font-bold text-white'><Link activeclass="active" to="/" spy='true' smooth='true' offset={50} duration={500} >
+                            <li className='my-3 font-bold text-white'><Link activeclass="active" to="/places" spy='true' smooth='true' offset={50} duration={500} >
                                 Place to stay
                             </Link></li>
                             <li className='my-3 font-bold text-white'><Link activeclass="active" to="/" spy='true' smooth='true' offset={50} duration={500} >
