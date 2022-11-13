@@ -84,7 +84,7 @@ const Navbar = () => {
             {/* pop-up overlay */}
             {wallet ?  <div className='bg-black/80 fixed w-full h-screen z-10 top-0 left-0'> </div>: '' }
             
-            <div className={wallet ? 'fixed top-[30%] lg:left-[30%] w-[300px] sm:w-[600px] z-10 h-[220px] sm:h-[300px] bg-white rounded-2xl' : 'hidden'}>
+            <div className={wallet ? 'fixed top-[30%] left-10 lg:left-[30%] w-[300px] sm:w-[600px] z-10 h-[220px] sm:h-[300px] bg-white rounded-2xl' : 'hidden'}>
                 
                 <div className='w-[90%] mx-auto p-1 sm:p-5'>
                     <div className='flex justify-between border-b-2'>  
