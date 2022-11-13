@@ -16,9 +16,11 @@ const Navbar = () => {
     } 
 
     
-    function handleWallet(){
+    function handleWallet(e){
         setWallet(!wallet)
+        
     }
+    
 
   return (
     <div className='sm:max-w-[90%] lg:max-w-[70%] mx-auto items-center p-4'>
@@ -51,7 +53,7 @@ const Navbar = () => {
                 </div>
 
                 <div className='my-2'>
-                    <Link onClick={handleWallet} className='sm:max-w-[170px] sm:h-[48px] px-4 py-2 rounded-lg bg-[#A02279] text-white text-xs sm:text-sm text-center' to='/'>Connect wallet</Link>
+                    <button onClick={handleWallet} className='sm:max-w-[170px] sm:h-[48px] px-4 py-2 rounded-lg bg-[#A02279] text-white text-xs sm:text-sm text-center'>Connect wallet</button>
 
                 </div>
             </div>
@@ -82,31 +84,34 @@ const Navbar = () => {
             {/* pop-up overlay */}
             {wallet ?  <div className='bg-black/80 fixed w-full h-screen z-10 top-0 left-0'> </div>: '' }
             
-                <div className={wallet ? 'fixed top-[30%] sm:left-[30%] w-[300px] sm:w-[600px] z-10 h-[220px] sm:h-[300px] bg-white rounded-2xl' : 'hidden'}>
-                    <div className='w-[90%] mx-auto p-1 sm:p-5'>
-                        <div className='flex justify-between border-b-2'>  
-                            <h1 className='my-2 text-sm sm:text-2xl font-bold'>Connect Wallet</h1>
-                            <FaTimes onClick={handleWallet} size={20} className='cursor-pointer mt-3' />
-                        </div>
-                        <p className='my-5 text-xs sm:text-base'>Choose your preferred wallet:</p>
-                        <div className='p-2 sm:p-3 my-3 border border-[#CFD8DC] rounded-xl bg-[#F8F9FA]'>
-                            <Link to='/'>
-                                <div className='flex justify-between'>
-                                    <p className='flex text-xs sm:text-lg font-bold mt-1 sm:mt-0'><img src={metaimage} alt='/' className='w-[20px] sm:w-[30px] mr-5' /> Metamask</p>
-                                    <IoIosArrowForward className='mt-2' />
-                                </div>                        
-                            </Link>
-                        </div>
-                        <div className='p-2 sm:p-3 my-3 border border-[#CFD8DC] rounded-xl bg-[#F8F9FA]'>
-                            <Link to='/'>
-                                <div className='flex justify-between'>
-                                    <p className='flex text-xs sm:text-lg font-bold mt-1 sm:mt-0'><img src={walletimage} alt='/' className='w-[20px] sm:w-[30px] mr-5' />WalletConnect</p>
-                                    <IoIosArrowForward className='mt-2' />
-                                </div>                        
-                            </Link>
-                        </div>
+            <div className={wallet ? 'fixed top-[30%] lg:left-[30%] w-[300px] sm:w-[600px] z-10 h-[220px] sm:h-[300px] bg-white rounded-2xl' : 'hidden'}>
+                
+                <div className='w-[90%] mx-auto p-1 sm:p-5'>
+                    <div className='flex justify-between border-b-2'>  
+                        <h1 className='my-2 text-sm sm:text-2xl font-bold'>Connect Wallet</h1>
+                        <FaTimes onClick={handleWallet} size={20} className='cursor-pointer mt-3' />
+                    </div>
+                    <p className='my-5 text-xs sm:text-base'>Choose your preferred wallet:</p>
+                    <div className='p-2 sm:p-3 my-3 border border-[#CFD8DC] rounded-xl bg-[#F8F9FA]'>
+                        <Link to='/'>
+                            <div className='flex justify-between'>
+                                <p className='flex text-xs sm:text-lg font-bold mt-1 sm:mt-0'><img src={metaimage} alt='/' className='w-[20px] sm:w-[30px] mr-5' /> Metamask</p>
+                                <IoIosArrowForward className='mt-2' />
+                            </div>                        
+                        </Link>
+                    </div>
+                    <div className='p-2 sm:p-3 my-3 border border-[#CFD8DC] rounded-xl bg-[#F8F9FA]'>
+                        <Link to='/'>
+                            <div className='flex justify-between'>
+                                <p className='flex text-xs sm:text-lg font-bold mt-1 sm:mt-0'><img src={walletimage} alt='/' className='w-[20px] sm:w-[30px] mr-5' />WalletConnect</p>
+                                <IoIosArrowForward className='mt-2' />
+                            </div>                        
+                        </Link>
                     </div>
                 </div>
+            </div>
+            
+                
         </div>
         
     </div>
