@@ -23,9 +23,9 @@ const Navbar = () => {
     
 
   return (
-    <div className='sm:max-w-[90%] lg:max-w-[70%] mx-auto items-center p-4'>
+    <div className='sm:min-w-[90%] lg:min-w-[70%] xl:max-w-[70%] mx-auto items-center p-4'>
         {/* Nav */}
-        <div className=''>
+        <div className='w-full'>
             <div className='flex w-full justify-between'>
                 <div className='flex'>
                     <AiOutlineMenu onClick={handleClick} size={25} className='mt-2 md:hidden z-10 cursor-pointer' />
@@ -34,18 +34,18 @@ const Navbar = () => {
                 </div>
                 
                 {/* menu */}
-                <div className='sm:text-sm lg:text-xl sm:mx-8 lg:mx-32 my-2'>
-                    <ul className='hidden md:flex'>
-                        <li className='sm:mx-2 lg:mx-5'><Link activeclass="active" to="/" spy='true' smooth='true' offset={50} duration={500} >
+                <div className='sm:text-sm lg:text-base xl:text-xl sm:mx-8 lg:mx-2 my-2'>
+                    <ul className='hidden md:flex mt-2'>
+                        <li className='sm:mx-2 lg:mx-3'><Link activeclass="active" to="/" spy='true' smooth='true' offset={50} duration={500} >
                             Home
                         </Link></li>
-                        <li className='sm:mx-2 lg:mx-5'><Link activeclass="active" to="/places" spy='true' smooth='true' offset={50} duration={500} >
+                        <li className='sm:mx-2 lg:mx-3'><Link activeclass="active" to="/places" spy='true' smooth='true' offset={50} duration={500} >
                             Place to stay
                         </Link></li>
-                        <li className='sm:mx-2 lg:mx-5'><Link activeclass="active" to="/" spy='true' smooth='true' offset={50} duration={500} >
+                        <li className='sm:mx-2 lg:mx-3'><Link activeclass="active" to="/" spy='true' smooth='true' offset={50} duration={500} >
                             NFTs
                         </Link></li>
-                        <li className='sm:mx-2 lg:mx-5'><Link activeclass="active" to="/" spy='true' smooth='true' offset={50} duration={500} >
+                        <li className='sm:mx-2 lg:mx-3'><Link activeclass="active" to="/" spy='true' smooth='true' offset={50} duration={500} >
                             Community
                         </Link></li>
                        
@@ -53,7 +53,7 @@ const Navbar = () => {
                 </div>
 
                 <div className='my-2'>
-                    <button onClick={handleWallet} className='sm:max-w-[170px] sm:h-[48px] px-4 py-2 rounded-lg bg-[#A02279] text-white text-xs sm:text-sm text-center'>Connect wallet</button>
+                    <button onClick={handleWallet} className='sm:min-w-[120px] sm:h-[48px] px-4 py-2 rounded-lg bg-[#A02279] text-white text-xs sm:text-sm text-center'>Connect wallet</button>
 
                 </div>
             </div>
