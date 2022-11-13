@@ -11,9 +11,9 @@ const Place = () => {
         )
     }
   return (
-    <div className='sm:w-[70%] mx-auto'>
+    <div className='sm:max-w-[90%] lg:max-w-[70%] mx-auto'>
         <div className='items-center sm:my-10'>
-            <div className='grid grid-cols-3 text-sm sm:text-xl sm:flex justify-between w-[90%] m-2'>
+            <div className='grid grid-cols-3 text-sm sm:text-xl lg:flex justify-between w-[90%] m-2'>
                 <p><Link to='/'>Restaurant</Link></p>
                 <p><Link to='/'>Cottage</Link></p>
                 <p><Link to='/'>Castle</Link></p>
@@ -27,7 +27,7 @@ const Place = () => {
                     <img src={setting} alt='/' />
                 </div>
             </div>
-            <div className='w-full grid grid-cols-1 sm:grid-cols-4 gap-2 text-center py-8'>
+            <div className='w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 text-center py-8'>
                 {location.map(createLocation)}
             </div>                          
         </div>

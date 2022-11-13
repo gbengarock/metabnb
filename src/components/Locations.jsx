@@ -9,10 +9,10 @@ const Locations = () => {
         )
     }
   return (
-    <div className='sm:w-[70%] mx-auto'>
+    <div className='sm:max-w-[90%] lg:max-w-[70%] mx-auto'>
         <div className='items-center'>
-        <h1 className='text-xl sm:text-5xl font-bold text-center'>Inspiration for your next adventure</h1>
-            <div className='w-full grid grid-cols-1 sm:grid-cols-4 gap-2 text-center py-8'>
+        <h1 className='text-xl sm:text-3xl lg:text-5xl font-bold text-center'>Inspiration for your next adventure</h1>
+            <div className='w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 text-center py-8'>
                 {location.map(createLocation).slice(0,8)}
             </div>                          
         </div>

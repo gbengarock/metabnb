@@ -8,15 +8,15 @@ import { Link } from 'react-router-dom'
 const Footer = () => {
   return (
     <div className='sm:h-[280px] bg-[#1D1D1E] text-white'>
-        <div className='w-[90%] sm:w-[70%] mx-auto py-10 flex justify-between'>
+        <div className='max-w-[90%] lg:max-w-[70%] mx-auto py-10 flex justify-between'>
             <div>
-                <img src={logo2} alt='/' className='w-[100px] sm:w-[200px]' />
+                <img src={logo2} alt='/' className='w-[100px]' />
                 <div className='flex mt-10 sm:mt-20'>
                     <FaFacebookF color='white' className='mr-3'/>
                     <AiFillInstagram color='white' className='mr-3'/>
                     <AiOutlineTwitter color='white' className='mr-3'/>
                 </div>
-                <p className='flex my-5 text-xs sm:text-base'><AiFillCopyrightCircle size={18} color='white' className='sm:mt-1 mr-2' /> 2022 Metabnb</p>
+                <p className='flex my-5 text-xs sm:text-base'><AiFillCopyrightCircle size={18} color='white' className='mt-1 mr-2' /> 2022 Metabnb</p>
             </div>
 
             <div className=''>
